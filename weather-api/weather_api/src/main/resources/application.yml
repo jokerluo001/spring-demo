@@ -1,0 +1,31 @@
+spring:
+  datasource:
+    username: postgres
+    password: postgres
+    driver-class-name: org.postgresql.Driver
+    url: jdbc:postgresql://
+  jpa:
+    show-sql: true
+
+
+weather:
+  gaode:
+    url: https://restapi.amap.com/v3/weather/weatherInfo?key={key}&city={city}&extensions={extensions}
+    key:
+  zhixin:
+    url: https://api.seniverse.com/v3/weather/now.json?key={key}&location={city}
+    key:
+  #hefeng:
+    #url: https://devapi.qweather.com/v7/weather/now?key={key}&location={city}
+    #key:
+  gaofen:
+    url: http://gfapi.mlogcn.com/weather/v001/now?areacode={city}&key={key}
+    key:
+  yikeyun:
+    url: https://v0.yiketianqi.com/api?unescape=1&version=v61&appid=17976751&appsecret={key}&cityid={city}
+    key:
+  apispace:
+    url: https://eolink.o.apispace.com/456456/weather/v001/now?areacode={city}
+  baidu:
+    url: https://api.map.baidu.com/weather/v1/?district_id={city}&data_type=all&ak={key}
+    key:
